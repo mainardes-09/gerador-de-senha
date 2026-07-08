@@ -1,244 +1,239 @@
-/* ==========================
+/* ===========================
    RESET
-========================== */
+=========================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
 body{
-    background:#5E7C5A; /* verde escuro pastel */
-    color:#000;
+    background:#0B1628;
+    color:#FFFFFF;
     display:flex;
     justify-content:center;
     align-items:center;
     min-height:100vh;
 }
 
-/* ==========================
+/* ===========================
    CONTAINER
-========================== */
+=========================== */
 
 .container{
-    width:850px;
-    background:#D8E6D2;
-    padding:35px;
-    border-radius:18px;
-    box-shadow:0 12px 30px rgba(0,0,0,.25);
+    width:820px;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
 }
 
-/* ==========================
-   CABEÇALHO
-========================== */
+/* ===========================
+   TÍTULO
+=========================== */
 
 header{
     text-align:center;
-    margin-bottom:30px;
 }
 
 header img{
-    width:55px;
-    margin-bottom:10px;
+    width:38px;
+    margin-bottom:15px;
 }
 
 header h1{
-    font-size:2rem;
+    font-size:2.2rem;
     margin-bottom:10px;
+    font-weight:700;
 }
 
 header p{
     font-size:1.05rem;
+    color:#D7D7D7;
 }
 
-/* ==========================
-   SENHA GERADA
-========================== */
+/* ===========================
+   CAMPO DA SENHA
+=========================== */
 
-.senha-box{
-    background:#BFD9B8;
-    border:2px solid #4F6F52;
-    border-radius:12px;
-    padding:18px;
-    margin-bottom:25px;
+.senha{
+    background:#15274E;
+    border-bottom:4px solid #1F6BFF;
+    padding:25px;
 }
 
-.senha-box label{
+.senha label{
+    font-size:15px;
     display:block;
-    font-weight:bold;
-    margin-bottom:8px;
+    margin-bottom:10px;
 }
 
 #campo-senha{
     width:100%;
     border:none;
-    background:transparent;
     outline:none;
+    background:transparent;
+    color:#FFF;
     font-size:2rem;
-    color:#000;
 }
 
-/* ==========================
-   CONFIGURAÇÕES
-========================== */
+/* ===========================
+   PAINEL
+=========================== */
 
-.configuracoes{
+.painel{
+    border:2px solid #1F6BFF;
+    padding:30px;
+}
+
+.painel h2{
+    font-size:2rem;
+    margin-bottom:35px;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.opcoes{
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:repeat(3,1fr);
     gap:40px;
-    border:2px solid #6B8F71;
-    border-radius:15px;
-    padding:25px;
 }
 
-h2{
-    margin-bottom:25px;
+/* ===========================
+   TÍTULOS
+=========================== */
+
+.opcoes h3{
+    margin-bottom:18px;
+    font-size:1.2rem;
 }
 
-.configuracoes h3{
-    margin-bottom:15px;
-}
-
-/* ==========================
-   BOTÕES + E -
-========================== */
+/* ===========================
+   CONTADOR
+=========================== */
 
 .contador{
     display:flex;
     align-items:center;
-    gap:10px;
 }
 
 .contador button{
-    width:38px;
-    height:38px;
-    border:none;
-    cursor:pointer;
-    font-size:20px;
-    background:#4F6F52;
-    color:white;
-    border-radius:8px;
-    transition:.3s;
-}
 
-.contador button:hover{
-    background:#2F5233;
-}
-
-#quantidade{
-    font-size:22px;
-    font-weight:bold;
     width:40px;
-    text-align:center;
+    height:40px;
+
+    border:1px solid #1F6BFF;
+    background:transparent;
+    color:#FFF;
+
+    cursor:pointer;
+
+    font-size:20px;
 }
 
-/* ==========================
-   CHECKBOXES
-========================== */
+.contador span{
 
-.opcoes{
+    width:60px;
+    height:40px;
+
+    border-top:1px solid #1F6BFF;
+    border-bottom:1px solid #1F6BFF;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ===========================
+   CHECKBOXES
+=========================== */
+
+.lista{
+
     display:flex;
     flex-direction:column;
     gap:12px;
+
 }
 
-.opcoes label{
+.lista label{
+
     display:flex;
     align-items:center;
-    gap:8px;
+    gap:10px;
+
     cursor:pointer;
 }
 
 input[type="checkbox"]{
+
     width:18px;
     height:18px;
+
+    accent-color:#2B68FF;
 }
 
-/* ==========================
-   FORÇA DA SENHA
-========================== */
+/* ===========================
+   FORÇA
+=========================== */
 
 .barra{
+
     width:100%;
-    height:18px;
-    background:#C9C9C9;
-    border-radius:15px;
-    overflow:hidden;
+    height:22px;
+
+    background:#112447;
+
     margin-bottom:15px;
 }
 
 #nivel{
+
+    width:30%;
     height:100%;
-    width:20%;
-    transition:.4s;
-    border-radius:15px;
+
+    background:#D7263D;
+
+    transition:.3s;
+
 }
 
-/* Cores */
+.textos{
 
-.fraca{
-    background:#E74C3C;
-}
-
-.media{
-    background:#F1C40F;
-}
-
-.forte{
-    background:#2ECC71;
-}
-
-.texto-forca{
     display:flex;
     justify-content:space-between;
-    font-weight:bold;
+
+    font-size:14px;
+
 }
 
 #status{
-    margin-top:15px;
-    font-size:20px;
+
+    margin-top:18px;
+
+    font-size:1.1rem;
 }
 
-/* ==========================
-   BOTÃO
-========================== */
-
-.botao{
-    margin-top:30px;
-    display:flex;
-    justify-content:center;
-}
-
-.botao button{
-    padding:15px 40px;
-    border:none;
-    background:#4F6F52;
-    color:white;
-    font-size:18px;
-    border-radius:10px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.botao button:hover{
-    background:#2F5233;
-    transform:scale(1.05);
-}
-
-/* ==========================
+/* ===========================
    RESPONSIVO
-========================== */
+=========================== */
 
 @media(max-width:850px){
 
     .container{
+
         width:95%;
+
     }
 
-    .configuracoes{
+    .opcoes{
+
         grid-template-columns:1fr;
+        gap:30px;
+
     }
 
 }
